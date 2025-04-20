@@ -713,7 +713,7 @@ as of 0.4.0 all options are specified in config file, see in '/home/username/.co
                 p.stereo = 0;
 
             // handle for user setting too many bars
-            if (p.fixedbars) {
+            if (p.fixedbars && (output_mode != OUTPUT_RAW)) {
                 p.autobars = 0;
                 if (p.fixedbars * p.bar_width + p.fixedbars * p.bar_spacing - p.bar_spacing > width)
                     p.autobars = 1;
